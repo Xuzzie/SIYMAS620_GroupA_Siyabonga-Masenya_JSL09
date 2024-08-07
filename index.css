@@ -20,3 +20,11 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+div.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1.time {
+  text-align: center;
+}
