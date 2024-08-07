@@ -32,5 +32,7 @@ fetch(
      *
      * Don't worry about positioning the author in the lower-left yet.
      */
-    document.getElementById("authorsName").textContent = data.user.name;
+    document.getElementById(
+      "authorsName"
+    ).textContent = `By: ${data.user.name}`;
   });
