@@ -55,16 +55,13 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
         <img src=${data.image.small} />
         <span>${data.name}</span>
     `;
-  });
+  })
 
-/**
- * Challenge: Pull down the cryptocurrency data for dogecoin from the
- * CoinGecko API and log it to the console
- *
- * Also add a .catch() method to console any errors that might occur to the console
- */
+  /**
+   * Challenge: Pull down the cryptocurrency data for dogecoin from the
+   * CoinGecko API and log it to the console
+   *
+   * Also add a .catch() method to console any errors that might occur to the console
+   */
 
-fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-  .then((res) => res.json())
-  .then((data) => console.log(data))
   .catch((err) => console.error(err));
