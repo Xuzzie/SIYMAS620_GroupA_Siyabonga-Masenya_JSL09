@@ -29,3 +29,7 @@ h1.time {
   border: red;
   text-align: center;
 }
+div#crypto-top {
+  display: flex;
+  align-items: center;
+}

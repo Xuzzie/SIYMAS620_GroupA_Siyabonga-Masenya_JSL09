@@ -43,12 +43,19 @@ fetch(
     document.getElementById("author").textContent = `By: Dodi Achmad`;
   });
 
-fetch("https://api.coingecko.com/api/v3/coins/dogecoin").then((res) => {
-  if (!res.ok) {
-    throw Error("Something went wrong");
-  }
-  return res.json();
-});
+fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+  .then((res) => {
+    if (!res.ok) {
+      throw Error("Something went wrong");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    document.getElementById("crypto").innerHTML = `
+        <img src=${data.image.small} />
+        <span>${data.name}</span>
+    `;
+  });
 
 /**
  * Challenge: Pull down the cryptocurrency data for dogecoin from the
