@@ -26,5 +26,6 @@ div.top {
 }
 
 h1.time {
+  border: red;
   text-align: center;
 }
