@@ -43,6 +43,13 @@ fetch(
     document.getElementById("author").textContent = `By: Dodi Achmad`;
   });
 
+fetch("https://api.coingecko.com/api/v3/coins/dogecoin").then((res) => {
+  if (!res.ok) {
+    throw Error("Something went wrong");
+  }
+  return res.json();
+});
+
 /**
  * Challenge: Pull down the cryptocurrency data for dogecoin from the
  * CoinGecko API and log it to the console
@@ -52,4 +59,5 @@ fetch(
 
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
   .then((res) => res.json())
-  .then((data) => console.error(err));
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));
